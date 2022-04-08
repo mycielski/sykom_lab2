@@ -7,7 +7,7 @@
 :vpi_module "/usr/lib/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/lib/ivl/v2005_math.vpi";
 :vpi_module "/usr/lib/ivl/va_math.vpi";
-S_0x564f1c545130 .scope module, "gpioemu" "gpioemu" 2 1;
+S_0x55f0e1930110 .scope module, "gpioemu" "gpioemu" 2 1;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "n_reset";
     .port_info 1 /INPUT 16 "unnamed";
@@ -20,51 +20,59 @@ S_0x564f1c545130 .scope module, "gpioemu" "gpioemu" 2 1;
     .port_info 8 /OUTPUT 32 "unnamed";
     .port_info 9 /INPUT 1 "clk";
     .port_info 10 /OUTPUT 32 "unnamed";
-o0x7f0d143a2018 .functor BUFZ 1, C4<z>; HiZ drive
-v0x564f1c50f0a0_0 .net "clk", 0 0, o0x7f0d143a2018;  0 drivers
-o0x7f0d143a2048 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
-v0x564f1c50ee40_0 .net "gpio_in", 31 0, o0x7f0d143a2048;  0 drivers
-v0x564f1c558830_0 .var "gpio_in_s", 31 0;
-o0x7f0d143a20a8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
-v0x564f1c5588f0_0 .net "gpio_in_s_insp", 31 0, o0x7f0d143a20a8;  0 drivers
-o0x7f0d143a20d8 .functor BUFZ 1, C4<z>; HiZ drive
-v0x564f1c5589d0_0 .net "gpio_latch", 0 0, o0x7f0d143a20d8;  0 drivers
-o0x7f0d143a2108 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
-v0x564f1c558ae0_0 .net "gpio_out", 31 0, o0x7f0d143a2108;  0 drivers
-v0x564f1c558bc0_0 .var "gpio_out_s", 31 0;
-o0x7f0d143a2168 .functor BUFZ 1, C4<z>; HiZ drive
-v0x564f1c558ca0_0 .net "n_reset", 0 0, o0x7f0d143a2168;  0 drivers
-o0x7f0d143a2198 .functor BUFZ 16, C4<zzzzzzzzzzzzzzzz>; HiZ drive
-v0x564f1c558d60_0 .net "saddress", 15 0, o0x7f0d143a2198;  0 drivers
-o0x7f0d143a21c8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
-v0x564f1c558e40_0 .net "sdata_in", 31 0, o0x7f0d143a21c8;  0 drivers
-o0x7f0d143a21f8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
-v0x564f1c558f20_0 .net "sdata_out", 31 0, o0x7f0d143a21f8;  0 drivers
-v0x564f1c559000_0 .var "sdata_out_s", 31 0;
-o0x7f0d143a2258 .functor BUFZ 1, C4<z>; HiZ drive
-v0x564f1c5590e0_0 .net "srd", 0 0, o0x7f0d143a2258;  0 drivers
-o0x7f0d143a2288 .functor BUFZ 1, C4<z>; HiZ drive
-v0x564f1c5591a0_0 .net "swr", 0 0, o0x7f0d143a2288;  0 drivers
-E_0x564f1c546c90 .event posedge, v0x564f1c5589d0_0;
-E_0x564f1c546df0 .event negedge, v0x564f1c558ca0_0;
-    .scope S_0x564f1c545130;
+o0x7f7a9db07018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55f0e18f9e40_0 .net "clk", 0 0, o0x7f7a9db07018;  0 drivers
+o0x7f7a9db07048 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x55f0e1944210_0 .net "gpio_in", 31 0, o0x7f7a9db07048;  0 drivers
+v0x55f0e19442f0_0 .var "gpio_in_s", 31 0;
+o0x7f7a9db070a8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x55f0e19443b0_0 .net "gpio_in_s_insp", 31 0, o0x7f7a9db070a8;  0 drivers
+o0x7f7a9db070d8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55f0e1944490_0 .net "gpio_latch", 0 0, o0x7f7a9db070d8;  0 drivers
+o0x7f7a9db07108 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x55f0e19445a0_0 .net "gpio_out", 31 0, o0x7f7a9db07108;  0 drivers
+v0x55f0e1944680_0 .var "gpio_out_s", 31 0;
+o0x7f7a9db07168 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55f0e1944760_0 .net "n_reset", 0 0, o0x7f7a9db07168;  0 drivers
+o0x7f7a9db07198 .functor BUFZ 16, C4<zzzzzzzzzzzzzzzz>; HiZ drive
+v0x55f0e1944820_0 .net "saddress", 15 0, o0x7f7a9db07198;  0 drivers
+o0x7f7a9db071c8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x55f0e1944900_0 .net "sdata_in", 31 0, o0x7f7a9db071c8;  0 drivers
+o0x7f7a9db071f8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0x55f0e19449e0_0 .net "sdata_out", 31 0, o0x7f7a9db071f8;  0 drivers
+v0x55f0e1944ac0_0 .var "sdata_out_s", 31 0;
+o0x7f7a9db07258 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55f0e1944ba0_0 .net "srd", 0 0, o0x7f7a9db07258;  0 drivers
+o0x7f7a9db07288 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55f0e1944c60_0 .net "swr", 0 0, o0x7f7a9db07288;  0 drivers
+E_0x55f0e1931c90 .event posedge, v0x55f0e1944900_0;
+E_0x55f0e1931df0 .event posedge, v0x55f0e1944210_0;
+E_0x55f0e191bfe0 .event negedge, v0x55f0e1944760_0;
+    .scope S_0x55f0e1930110;
 T_0 ;
-    %wait E_0x564f1c546df0;
+    %wait E_0x55f0e191bfe0;
     %pushi/vec4 0, 0, 32;
-    %assign/vec4 v0x564f1c559000_0, 0;
+    %assign/vec4 v0x55f0e1944ac0_0, 0;
     %pushi/vec4 0, 0, 32;
-    %assign/vec4 v0x564f1c558bc0_0, 0;
+    %assign/vec4 v0x55f0e1944680_0, 0;
     %pushi/vec4 0, 0, 32;
-    %assign/vec4 v0x564f1c558830_0, 0;
+    %assign/vec4 v0x55f0e19442f0_0, 0;
     %jmp T_0;
     .thread T_0;
-    .scope S_0x564f1c545130;
+    .scope S_0x55f0e1930110;
 T_1 ;
-    %wait E_0x564f1c546c90;
-    %load/vec4 v0x564f1c50ee40_0;
-    %assign/vec4 v0x564f1c558830_0, 0;
+    %wait E_0x55f0e1931df0;
+    %load/vec4 v0x55f0e1944210_0;
+    %assign/vec4 v0x55f0e19442f0_0, 0;
     %jmp T_1;
     .thread T_1;
+    .scope S_0x55f0e1930110;
+T_2 ;
+    %wait E_0x55f0e1931c90;
+    %load/vec4 v0x55f0e1944900_0;
+    %assign/vec4 v0x55f0e1944680_0, 0;
+    %jmp T_2;
+    .thread T_2;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";

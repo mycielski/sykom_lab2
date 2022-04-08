@@ -28,9 +28,13 @@ always@(negedge n_reset) begin
 end
 
 // odczyt z portu GPIO
-always@(posedge gpio_latch) begin
+always@(posedge gpio_in) begin
     gpio_in_s <= gpio_in;
 end
 
+// zapis na gpio
+always@(posedge sdata_in) begin
+    gpio_out_s <= sdata_in;
+end
 
 endmodule
