@@ -1,5 +1,4 @@
-module gpioemu(n_reset, saddress[15:0], srd, swr, sdata_in[31:0], sdata_out[31:0],
-gpio_in[31:0], gpio_latch, gpio_out[31:0], clk, gpio_in_s_insp[31:0]);
+module gpioemu(n_reset, saddress[15:0], srd, swr, sdata_in[31:0], sdata_out[31:0], gpio_in[31:0], gpio_latch, gpio_out[31:0], clk, gpio_in_s_insp[31:0]);
 input n_reset;
 input [15:0] saddress;
 input srd;
@@ -14,6 +13,15 @@ reg [31:0] gpio_out_s;
 reg [31:0] sdata_out;
 output [31:0] gpio_in_s_insp;
 input clk;
-endmodule
+
 
 //odpowiedz na reset (aktywowane przejściem 1->0)
+always@(negedge n_reset) begin
+    sdata_in <= 0;
+    sdata_out <= 0;
+    gpio_latch <= 0;
+    gpio_in <= 0;
+    gpio_out <= 0;
+end
+
+endmodule
