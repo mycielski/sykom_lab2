@@ -32,9 +32,32 @@ always@(posedge gpio_in) begin
     gpio_in_s <= gpio_in;
 end
 
-// zapis na gpio
-always@(posedge sdata_in) begin
-    gpio_out_s <= sdata_in;
+// odczyt na gpio
+
+wire [11:0] cut_address;
+assign cut_address = {sadddress[15:12], sadddress[7:0]};
+
+always@(posedge srd) begin
+    if(cut_address == 12'h6b0)
+        sdata_in_s <= gpio_in_s[3:0] << 8;
+    else if (cut_address == 12'hdb0) 
+        sdata_in_s <= gpio_in_s[7:4] << 20;
+    else 
+        sdata_in_s <= 0;
 end
+
+
+always@(posedge swr) begin
+    if(cut_address == 12'h6b0)
+        sdata_out_s[3:0] <= sdata_out[11:8];
+    else if (cut_address == 12'hdb0) 
+        sdata_out_s[7:4] <= sdata_out[23:20];
+    else 
+        gpio_out_s <= gpio_out;
+end
+
+assign sdata_in = sdata_in_s;
+assign gpio_out = gpio_out_s;
+
 
 endmodule
