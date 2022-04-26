@@ -14,6 +14,7 @@ module GpioEmu_tb;
 	wire[31:0] gpio_out_test;
 	wire[31:0] sdata_out_test;
 	wire[31:0] gpio_in_s_insp_test;
+	wire[7:0] counter = 0;
 
 	initial begin
 		$dumpfile("GpioEmu.vcd");
@@ -83,5 +84,5 @@ module GpioEmu_tb;
 		#1500 $finish;
 
 	end
-	GpioEmu test1(n_reset, saddress, srd, swr, sdata_in, sdata_out_test, gpio_in, gpio_latch, gpio_out_test, clk, gpio_in_s_insp_test);
+	GpioEmu test1(n_reset, saddress, srd, swr, sdata_in, sdata_out_test, gpio_in, gpio_latch, gpio_out_test, clk, gpio_in_s_insp_test, counter);
 endmodule
