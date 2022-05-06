@@ -68,7 +68,7 @@ module GpioEmu_tb;
 		#5 srd= 1;
 		#5 srd= 0;
 
-		//odczyt ze złego adresu
+		//Zły odczyt
 		#5 gpio_in = 32'h123fffaa;
 		#5 gpio_latch = 1;
 		#5 gpio_latch = 0;

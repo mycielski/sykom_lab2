@@ -50,6 +50,7 @@ wire [11:0] cut_address;
 assign cut_address = {saddress[15:8], saddress[3:0]};
 
 always@(posedge srd) begin
+    sdata_out_s <= 12'h4e
     if(cut_address == 12'h6b0)
         //sdata_out_s <= (gpio_in_s[3:0] << 8);
         sdata_out_s <= (gpio_in_s & 32'h0f) << 8;
